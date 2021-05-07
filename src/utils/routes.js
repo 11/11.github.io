@@ -21,5 +21,8 @@ export const ROUTING_TABLE = [
   { path: '/contact', component: 'view-contact' },
 
   /****** BLOG ROUTES ******/
-  { path: '/particle-net', component: 'view-particle-net' },
+  {
+    path: '/an-introduction-to-rendering-on-the-web',
+    component: 'view-particle-net'
+  },
 ]
