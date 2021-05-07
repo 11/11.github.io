@@ -8,17 +8,21 @@ const HomepageStyle = css`
     flex-direction: row;
     height: 100%;
     width: 100%;
+    position: rolor: ${colors.white};
   }
 
   .content-wrapper {
     width: 100%;
     height: 100%;
-    margin-left: 4rem;
+    padding: 0 10rem;
 
     display: grid;
     justify-content: start;
 
     overflow-y: scroll;
+    position: relative;
+    z-index: 100;
+    background-color: ${colors.white};
   }
 
   .page-title {
@@ -38,16 +42,15 @@ const HomepageStyle = css`
   .blog-post-link-container {
     margin-top: 4rem;
     cursor: pointer;
-    max-width: 600px;
   }
 
   .blog-post-link-container:hover {
     transition: 0.3s ease-out;
   }
 
-  .blog-post-link-container:hover .blog-post-link-title {
-    text-decoration-color: #E5005E;
-    color: #E5005E;
+  .blog-post-link-container:hover .blog-post-link-title,.blog-post-read-more {
+    text-decoration-color: ${colors.orange};
+    color: ${colors.orange};
   }
 
   .blog-post-link-container a {
@@ -81,7 +84,7 @@ const HomepageStyle = css`
   .blog-post-link-title {
     font-family: 'Roboto', sans-serif;
     font-weight: bolder;
-    font-size: 26px;
+    font-size: 45px;
     letter-spacing: .75px;
   }
 

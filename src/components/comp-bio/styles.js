@@ -1,55 +1,76 @@
-import { css } from 'lit-element';
+import { css, unsafeCSS } from 'lit-element'
 
-import { fonts, colors } from 'styles';
+import { fonts, colors } from 'styles'
 
 export const DesktopStyle = css`
-  .bio-container {
+  .bio-wrapper {
     height: 100%;
-    padding: 2rem 4rem;
-    margin-left: 15vw;
+    width: 600px;
     border-right: solid 1px ${colors.gray20};
 
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: flex-start;
   }
 
-  .bio-container > div {
-    margin-bottom: 50px;
+  .background-image-wrapper {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    object-fit: contain;
+    transform: translateX(-30%);
+  }
+
+  .background-image-wrapper img {
+    height: 100%;
+    vertical-align: middle;
+    filter: brightness(55%) saturate(120%);
+  }
+
+  .bio-content-wrapper {
+    position: relative;
+    z-index: 10;
+    padding: 1.5rem 12rem 1.5rem 4rem;
+  }
+
+  .bio-content-wrapper > div {
+    margin-bottom: 30px;
   }
 
   /* title is inline block to allow nav to be on the top bar as well, also has custom font */
   .profile {
-    font: "Palatino Linotype", sans-serif;
-    font-weight: 600;
-    font-size: 26px;
-    width: 100%;
+    color: ${colors.white};
+    font-family: ${fonts.roboto};
+    font-weight: 300;
+    font-size: 24px;
+    white-space: nowrap;
 
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: baseline;
-  }
-
-  .profile img {
-    margin: 1rem 0;
-    border: solid 1px ${colors.gray20};
-    border-radius: 100%;
-    margin-right: 1rem;
-    width: 4rem;
-    height: 4rem;
-  }
-
-  .profile a {
     color: ${colors.black};
+    background-color: rgba(255,255,255,.95);
+    padding: .75rem;
+  }
+
+  .profile-accent {
+    display: block;
+    font-family: ${fonts.wotfard2};
+    font-size: 45px;
+    font-weight: 600;
+    margin-top: .25rem;
+    border-radius: 3px;
     text-decoration: none;
     transition: 0.2s ease-out;
-  }
-
-  .profile a:hover {
-    color: ${colors.pink};
-    text-decoration: underline;
   }
 
   .description {
@@ -68,9 +89,9 @@ export const DesktopStyle = css`
   }
 
   .page-menu {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 200;
-    font-size: 20px;
+    font-family: ${fonts.roboto};
+    font-weight: 300;
+    font-size: 22px;
     letter-spacing: 1px;
 
     width: 100%;
@@ -82,22 +103,22 @@ export const DesktopStyle = css`
 
   .page-menu a {
     display: inline-block;
-    color: ${colors.gray30};
+    color: ${colors.white};
     text-decoration: none;
 
     padding: 5px 10px;
 
-    border-left: 1px solid ${colors.black};
+    border-left: 1px solid ${colors.white};
     margin-bottom: .25rem;
     width: 100%;
+    transition: 0.2s ease-out;
   }
 
   .page-menu a:hover {
-    color: ${colors.pink};
+    color: ${colors.orange};
     text-decoration: none;
-    border-left: 4px solid ${colors.pink};
+    border-left: 4px solid ${colors.orange};
     transform: scale(1, 1.01);
-    transition: 0.2s ease-out;
   }
 
   .bio-links {
@@ -110,7 +131,8 @@ export const DesktopStyle = css`
 
   .icon-container {
     border-radius: 100px;
-    border: 2px solid ${colors.gray10};
+    border: 3px solid ${colors.white};
+    background-color: rgba(255,255,255, 0.7);
     padding: 10px;
     margin-right: 10px;
 
@@ -120,7 +142,8 @@ export const DesktopStyle = css`
   }
 
   .icon-container:hover {
-    border: 2px solid ${colors.pink};
+    background-color: rgba(255,255,255, 1);
+    border: 3px solid ${colors.violet};
     transition: 0.2s ease-out;
   }
 
@@ -130,8 +153,9 @@ export const DesktopStyle = css`
   }
 
   .bio-footer {
+    white-space: nowrap;
     font-family: 'Roboto', sans-serif;
     font-size: .75rem;
-    color: ${colors.gray30};
+    color: ${colors.white};
   }
-`;
+`

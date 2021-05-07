@@ -9,8 +9,10 @@ const PageWrapper = css`
   .page-wrapper {
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
     height: 100%;
-    width: 100%
+    width: 100%;
+    max-width: 100%;
   }
 `
 
