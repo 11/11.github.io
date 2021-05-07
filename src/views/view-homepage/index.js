@@ -105,59 +105,7 @@ class Homepage extends LitElement {
     super();
     this.blogList = [
       {
-        title: 'Installing ChunkWM',
-        tag: 'Tutorial',
-        date: 'July 2018',
-        route: '/installing-chunkwm',
-        description: 'I recently had to start using OS X for work, and as a former Linux user, I felt something missing from my workflow. OS X is often thought of as the more capable and professional Linux machine, yet I still miss that ability to personalize the user experience to my liking.',
-      },
-      {
-        title: 'Oscillations',
-        tag: 'Animation',
-        date: 'May 2018',
-        route: '/oscillations',
-        description: "I've come to the conclusion that I'm obsessed with wave animations and it's an actual problem. This is the fifth animation where I have used some form of unit circle logic, and I think it's time to create something with a little more creativity."
-      },
-      {
-        title: 'Vimrc Starter Kit',
-        tag: 'Tutorial',
-        date: 'April 2018',
-        Route: '/vimrc-starter-kit',
-        description: 'Throughout this post, we are going to be editing the .vimrc file. Before we start editing files, we first have to understand what files we are going to be creating throughout this tutorial - as well as the purpose of each file.',
-      },
-      {
-        title: 'Just Concentrate',
-        tag: 'Article',
-        date: 'April 2018',
-        route: '/just-concentrate',
-        description: "As an ambitious twenty something looking to be more than a software engineer, I always feel as if I’m the slowest of my peers to progress my career forward."
-      },
-      {
-        title: 'DNA Helix',
-        tag: 'Animation',
-        date: 'March 2018',
-        route: '/dna-helix',
-        description: "So recently, I've just been obsessed with using trig in my animations. I felt that my previous Wrapping Waves post didn't create the illusion I wanted, so I decided to give it another go.",
-      },
-      {
-        title: 'Particle Net',
-        tag: 'Animation',
-        date: 'January 2018',
-        route: '/particle-net',
-        description: 'So this small animation is my first ever JavaScript canvas project, and let me tell you, this project has made me grow as a developer.',
-      },
-    ];
-
-    this.popularPosts = [
-      {
-        title: 'DNA Helix',
-        tag: 'Animation',
-        date: 'March 2018',
-        route: '/dna-helix',
-        description: "So recently, I've just been obsessed with using trig in my animations. I felt that my previous Wrapping Waves post didn't create the illusion I wanted, so I decided to give it another go.",
-      },
-      {
-        title: 'Particle Net',
+        title: 'Introduction to Rendering for the Web',
         tag: 'Animation',
         date: 'January 2018',
         route: '/particle-net',
@@ -176,7 +124,6 @@ class Homepage extends LitElement {
               <div class="blog-post-link-header">
                 <div>
                   <span class="blog-post-link-title">${title}</span>
-                  <span class="tag"> ${tag} </span>
                 </div>
                 </div>
                 <div class="blog-post-link-description">
@@ -197,7 +144,6 @@ class Homepage extends LitElement {
 
         <div class="content-wrapper">
           <div class="blog-list-container">
-            <div class="page-title">Recently Posted</div>
             ${this.renderPostList(this.blogList)}
           </div>
         </div>

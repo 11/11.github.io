@@ -1,12 +1,12 @@
 import { LitElement, html, css } from 'lit-element';
 
-import { pink } from 'styles/colors';
+import { colors } from 'styles/colors';
 
 
 const ScrollbarStyle = css`
   .scroll-bar {
     height: 3px;
-    background-color: ${pink};
+    background-color: ${colors.pink};
   }
 `;
 

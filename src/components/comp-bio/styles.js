@@ -1,21 +1,13 @@
 import { css } from 'lit-element';
 
-import {
-  pink,
-  gray10,
-  gray20,
-  gray30,
-  black
-} from 'styles/colors';
-
-export const MobileStyle = css``;
+import { fonts, colors } from 'styles';
 
 export const DesktopStyle = css`
   .bio-container {
     height: 100%;
     padding: 2rem 4rem;
     margin-left: 15vw;
-    border-right: solid 1px ${gray20};
+    border-right: solid 1px ${colors.gray20};
 
     display: flex;
     flex-direction: column;
@@ -29,8 +21,8 @@ export const DesktopStyle = css`
 
   /* title is inline block to allow nav to be on the top bar as well, also has custom font */
   .profile {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
+    font: "Palatino Linotype", sans-serif;
+    font-weight: 600;
     font-size: 26px;
     width: 100%;
 
@@ -41,23 +33,27 @@ export const DesktopStyle = css`
   }
 
   .profile img {
-    border: solid 1px ${gray20};
+    margin: 1rem 0;
+    border: solid 1px ${colors.gray20};
     border-radius: 100%;
+    margin-right: 1rem;
     width: 4rem;
     height: 4rem;
-    margin-right: 1rem;
   }
 
   .profile a {
-    color: ${black};
+    color: ${colors.black};
+    text-decoration: none;
+    transition: 0.2s ease-out;
   }
 
   .profile a:hover {
-    color: ${pink};
+    color: ${colors.pink};
+    text-decoration: underline;
   }
 
   .description {
-    color: ${gray30};
+    color: ${colors.gray30};
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -86,20 +82,20 @@ export const DesktopStyle = css`
 
   .page-menu a {
     display: inline-block;
-    color: ${gray30};
+    color: ${colors.gray30};
     text-decoration: none;
 
     padding: 5px 10px;
 
-    border-left: 1px solid ${black};
+    border-left: 1px solid ${colors.black};
     margin-bottom: .25rem;
     width: 100%;
   }
 
   .page-menu a:hover {
-    color: ${pink};
+    color: ${colors.pink};
     text-decoration: none;
-    border-left: 4px solid ${pink};
+    border-left: 4px solid ${colors.pink};
     transform: scale(1, 1.01);
     transition: 0.2s ease-out;
   }
@@ -114,7 +110,7 @@ export const DesktopStyle = css`
 
   .icon-container {
     border-radius: 100px;
-    border: 2px solid ${gray10};
+    border: 2px solid ${colors.gray10};
     padding: 10px;
     margin-right: 10px;
 
@@ -124,7 +120,7 @@ export const DesktopStyle = css`
   }
 
   .icon-container:hover {
-    border: 2px solid ${pink};
+    border: 2px solid ${colors.pink};
     transition: 0.2s ease-out;
   }
 
@@ -135,7 +131,7 @@ export const DesktopStyle = css`
 
   .bio-footer {
     font-family: 'Roboto', sans-serif;
-    font-size: .5rem;
-    color: ${gray30};
+    font-size: .75rem;
+    color: ${colors.gray30};
   }
 `;

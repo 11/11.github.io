@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit-element';
 
-import { pink } from 'styles/colors';
+import { colors } from 'styles/colors';
 
 
 class Link extends LitElement {
@@ -9,7 +9,7 @@ class Link extends LitElement {
       a {
         font-family: inherit;
 
-        color: ${pink};
+        color: ${colors.pink};
         text-decoration: underline solid transparent;
 
         transition: text-decoration 150ms ease;
