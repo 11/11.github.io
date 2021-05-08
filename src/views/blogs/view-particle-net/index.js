@@ -34,16 +34,19 @@ class BlogParticleNet extends LitElement {
   }
 
   connectedCallback() {
-    super.connectedCallback();
+    super.connectedCallback()
+
     window.addEventListener("resize", this.handleResize)
-    document.addEventListener('DOMContentLoaded', this.onMount)
   }
 
+  updateSubtreeComplete() {
+
+  }
 
   disconnectedCallback() {
     super.disconnectedCallback();
+
     window.removeEventListener("resize", this.handleResize);
-    document.removeEventListener('DomContentLoaded',this.onMount)
   }
 
 
