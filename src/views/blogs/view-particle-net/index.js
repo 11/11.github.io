@@ -31,25 +31,25 @@ class BlogParticleNet extends LitElement {
   constructor() {
     super();
     document.title = 'Doug Rudolph - Particle Net';
-
-    this.handleResize = this.handleResize.bind(this);
-    this.startAnimation = this.startAnimation.bind(this);
-  }
-
-  firstUpdated() {
-    super.connectedCallback();
-    this.handleResize();
-    this.startAnimation();
   }
 
   connectedCallback() {
     super.connectedCallback();
-    window.addEventListener("resize", this.handleResize);
+    window.addEventListener("resize", this.handleResize)
+    document.addEventListener('DOMContentLoaded', this.onMount)
   }
+
 
   disconnectedCallback() {
     super.disconnectedCallback();
     window.removeEventListener("resize", this.handleResize);
+    document.removeEventListener('DomContentLoaded',this.onMount)
+  }
+
+
+  onMount = () => {
+    this.handleResize()
+    this.startAnimation()
   }
 
   handleResize = () => {
@@ -57,7 +57,6 @@ class BlogParticleNet extends LitElement {
     const { width: blogWidth} = canvas.parentElement.getBoundingClientRect()
     const paddingOffest = window.getComputedStyle(canvas.parentElement).paddingInline
     canvas.width = blogWidth - (parseInt(paddingOffest) * 2)
-    debugger
     canvas.height = 300
   }
 
