@@ -8,15 +8,31 @@ export const BlogStyle = css`
   z-index: 100;
   background-color: ${colors.white};
 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
   height: 100%;
-  width: calc(100% - 600px - 20rem);
+  width: calc(100%);
   white-space: wrap;
-  padding: 0 10rem;
   overflow-y: scroll;
+}
+
+.blog-utils {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  top: 30%;
+  position: sticky;
 }
 
 .blog {
   height: 100%;
+  width: 100%;
+  min-width: 600px;
+  padding: 0 6rem;
 }
 
 .blog-header1 {
@@ -35,7 +51,7 @@ export const BlogStyle = css`
   font-size: 30px;
   font-weight: 600;
   letter-spacing: .75px;
-  padding: 48px 6rem 16px 6rem;
+  padding: 48px 4rem 16px 4rem;
 }
 
 .blog-header3 {
@@ -55,7 +71,7 @@ export const BlogStyle = css`
   line-height: 1.6;
 
   margin-bottom: 32px;
-  padding: 0 6rem;
+  padding: 0 4rem;
 
 }
 

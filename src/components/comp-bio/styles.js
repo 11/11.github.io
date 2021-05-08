@@ -5,8 +5,6 @@ import { fonts, colors } from 'styles'
 export const DesktopStyle = css`
   .bio-wrapper {
     height: 100%;
-    width: 600px;
-    border-right: solid 1px ${colors.gray20};
 
     display: flex;
     flex-direction: column;
@@ -19,6 +17,7 @@ export const DesktopStyle = css`
     z-index: 1;
     height: 100%;
     width: auto;
+    max-width: 30%;
 
     display: flex;
     flex-direction: row;
@@ -26,7 +25,6 @@ export const DesktopStyle = css`
     align-items: center;
 
     object-fit: contain;
-    transform: translateX(-30%);
   }
 
   .background-image-wrapper img {
@@ -47,20 +45,21 @@ export const DesktopStyle = css`
 
   /* title is inline block to allow nav to be on the top bar as well, also has custom font */
   .profile {
-    color: ${colors.white};
+    color: ${colors.black};
     font-family: ${fonts.wotfard2};
     font-weight: 300;
     font-size: 24px;
     white-space: nowrap;
 
+    background-color: ${colors.white};
+    padding: .75rem;
+    border-radius: 2px;
+
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: baseline;
-    color: ${colors.black};
-    background-color: rgba(255,255,255,.95);
-    padding: .75rem;
-    border-radius: 2px;
+
   }
 
   .profile-accent {
@@ -71,21 +70,6 @@ export const DesktopStyle = css`
     margin-top: .25rem;
     text-decoration: none;
     transition: 0.2s ease-out;
-  }
-
-  .description {
-    color: ${colors.gray30};
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .description .description-entry {
-    display: inline-block;
-    white-space: nowrap;
-    padding-bottom: .15rem;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
   }
 
   .page-menu {

@@ -14,6 +14,9 @@ const PageWrapper = css`
     justify-content: flex-start;
     height: 100%;
     width: 100%;
+
+    padding: 0;
+    margin: 0;
   }
 `
 
@@ -50,11 +53,12 @@ class BlogParticleNet extends LitElement {
   }
 
   handleResize = () => {
-    const canvas = this.shadowRoot.getElementById('blog-canvas');
-    const blogPadding = window.getComputedStyle(canvas.parentElement).padding;
-    const offset = parseInt(blogPadding, 10);
-    canvas.width = canvas.parentElement.clientWidth;
-    canvas.height = 300;
+    const canvas = this.shadowRoot.getElementById('blog-canvas')
+    const { width: blogWidth} = canvas.parentElement.getBoundingClientRect()
+    const paddingOffest = window.getComputedStyle(canvas.parentElement).paddingInline
+    canvas.width = blogWidth - (parseInt(paddingOffest) * 2)
+    debugger
+    canvas.height = 300
   }
 
   startAnimation = () => {
@@ -81,14 +85,16 @@ class BlogParticleNet extends LitElement {
               code="this is a test"
             ></comp-codeblock>
           </div>
-        </div>
 
-        <comp-table-of-contents
-          .sections="${[
-            'Introduction',
-            'The Canvas'
-          ]}"
-        ></comp-table-of-contents>
+          <div class="blog-utils">
+            <comp-table-of-contents
+              .sections="${[
+                'Introduction',
+                'The Canvas'
+              ]}"
+            ></comp-table-of-contents>
+          </div>
+        </div>
       </div>
     `;
   }
