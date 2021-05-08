@@ -5,6 +5,7 @@ import { runAnimation } from './particle-net';
 
 import "components/comp-bio/"
 import 'components/comp-codeblock'
+import 'components/comp-table-of-contents'
 
 const PageWrapper = css`
   .page-wrapper {
@@ -13,7 +14,6 @@ const PageWrapper = css`
     justify-content: flex-start;
     height: 100%;
     width: 100%;
-    max-width: 100%;
   }
 `
 
@@ -57,7 +57,7 @@ class BlogParticleNet extends LitElement {
     canvas.height = 300;
   }
 
-  startAnimation() {
+  startAnimation = () => {
     const canvas = this.shadowRoot.getElementById('blog-canvas');
     const ctx = canvas.getContext("2d");
     runAnimation(canvas, ctx);
@@ -82,6 +82,13 @@ class BlogParticleNet extends LitElement {
             ></comp-codeblock>
           </div>
         </div>
+
+        <comp-table-of-contents
+          .sections="${[
+            'Introduction',
+            'The Canvas'
+          ]}"
+        ></comp-table-of-contents>
       </div>
     `;
   }

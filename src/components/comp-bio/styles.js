@@ -48,7 +48,7 @@ export const DesktopStyle = css`
   /* title is inline block to allow nav to be on the top bar as well, also has custom font */
   .profile {
     color: ${colors.white};
-    font-family: ${fonts.roboto};
+    font-family: ${fonts.wotfard2};
     font-weight: 300;
     font-size: 24px;
     white-space: nowrap;

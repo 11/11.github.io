@@ -3,12 +3,11 @@ import { fonts, colors } from 'styles'
 import "components/comp-bio/";
 
 const HomepageStyle = css`
-  .homepage-wrapper{
+  .homepage-wrapper {
     display: flex;
     flex-direction: row;
     height: 100%;
     width: 100%;
-    position: rolor: ${colors.white};
   }
 
   .content-wrapper {
@@ -128,15 +127,22 @@ class Homepage extends LitElement {
         title: 'Coding without your Hands',
         tag: 'Animation',
         date: 'January 2018',
-        route: '/particle-net',
-        description: 'So this small animation is my first ever JavaScript canvas project, and let me tell you, this project has made me grow as a developer.',
+        route: '/coding-without-your-hands',
+        description: '',
       },
       {
         title: 'Transitioning to Native Web-components',
         tag: 'Animation',
         date: 'January 2018',
-        route: '/particle-net',
-        description: 'So this small animation is my first ever JavaScript canvas project, and let me tell you, this project has made me grow as a developer.',
+        route: '/transitioning-to-native-web-components',
+        description: '',
+      },
+      {
+        title: 'What is Web Assembly?',
+        tag: 'Animation',
+        date: 'January 2018',
+        route: '/transitioning-to-native-web-components',
+        description: '',
       },
     ]
   }
