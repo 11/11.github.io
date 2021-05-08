@@ -12,11 +12,11 @@ export const BlogStyle = css`
   width: calc(100% - 600px - 20rem);
   white-space: wrap;
   padding: 0 10rem;
+  overflow-y: scroll;
 }
 
 .blog {
   height: 100%;
-  width
 }
 
 .blog-header1 {
@@ -35,7 +35,7 @@ export const BlogStyle = css`
   font-size: 30px;
   font-weight: 600;
   letter-spacing: .75px;
-  padding: 48px 5rem 16px 5rem;
+  padding: 48px 6rem 16px 6rem;
 }
 
 .blog-header3 {
@@ -55,21 +55,12 @@ export const BlogStyle = css`
   line-height: 1.6;
 
   margin-bottom: 32px;
-  padding: 0 5rem;
+  padding: 0 6rem;
 
 }
 
 .blog-code-inline {
 
-}
-
-.blog-code-block {
-  padding: 2rem;
-  background-color: ${colors.gray10};
-  border-radius: 6px;
-  font-family: 'League Mono', sans-serif;
-  font-size: 18px;
-  margin: 32px 0;
 }
 
 .blog-link {
@@ -83,7 +74,7 @@ export const BlogStyle = css`
 canvas{
   background-color: ${colors.violet};
   margin-bottom: 20px;
-  border-radius: 6px;
+  border-radius: 2px;
 }
 
 
@@ -95,4 +86,4 @@ canvas{
     background-color: ${colors.green};
   }
 }
-`;
+`

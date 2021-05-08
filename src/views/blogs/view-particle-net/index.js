@@ -3,7 +3,8 @@ import { LitElement, css, html } from 'lit-element';
 import { BlogStyle } from 'styles/blogs'
 import { runAnimation } from './particle-net';
 
-import "components/comp-bio/";
+import "components/comp-bio/"
+import 'components/comp-codeblock'
 
 const PageWrapper = css`
   .page-wrapper {
@@ -66,19 +67,19 @@ class BlogParticleNet extends LitElement {
     return html`
       <div class="page-wrapper">
         <comp-bio></comp-bio>
-
         <div class="blog-wrapper">
           <div class="blog">
-            <h1 class="blog-header1">Intro to Rendering for the Web</h1>
+            <h1 class="blog-header1">An Introduction to Rendering on the Web</h1>
             <p class="blog-text"> If you've been thinking about learning to develop your own browser games, or to create animations for the web, you've probably been a bit overwhelmed by the number of technologies and concepts at your disposable. We live in an era of abundance, and there are a lot of options.  </p>
             <canvas id="blog-canvas"></canvas>
             <p class="blog-text"> When I started working on my first rendering project for the web, my biggest priority was to was to find a solution that was native to the browser, and could be optimized for all devices - like this particle net animation that I have here.  </p>
             <p class="blog-text"> In this article, we are going to go over the native browser tools that can create web animations, video games, visualizations, and more.  </p>
             <h3 class="blog-header2">The Canvas</h3>
             <p class="blog-text">All rendering projects need a place to draw their outputs, and on the web we use the canvas element to do just that.</p>
-            <div class="blog-code-block">
-              &ltcanvas&gt</canvas>
-            </div>
+            <comp-codeblock
+              language="JavaScript"
+              code="this is a test"
+            ></comp-codeblock>
           </div>
         </div>
       </div>

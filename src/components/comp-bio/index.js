@@ -29,7 +29,7 @@ class Bio extends LitElement {
 
         <div class="bio-content-wrapper">
           <div class="profile">
-            <div>Hello World, I'm <span class="profile-accent"> Doug Rudolph 👋 </span></div>
+            <div>Hello World, I'm<span class="profile-accent">Doug Rudolph 👋</span></div>
           </div>
 
           <!-- Description

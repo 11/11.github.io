@@ -60,6 +60,7 @@ export const DesktopStyle = css`
     color: ${colors.black};
     background-color: rgba(255,255,255,.95);
     padding: .75rem;
+    border-radius: 2px;
   }
 
   .profile-accent {
@@ -68,7 +69,6 @@ export const DesktopStyle = css`
     font-size: 45px;
     font-weight: 600;
     margin-top: .25rem;
-    border-radius: 3px;
     text-decoration: none;
     transition: 0.2s ease-out;
   }
