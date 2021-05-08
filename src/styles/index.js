@@ -2,6 +2,7 @@ import { css } from 'lit-element'
 
 import { colors } from './colors'
 import { fonts } from './fonts'
+import { keyframes } from './keyframes'
 
 const PageWrapper = css`
   .page-wrapper {
@@ -15,5 +16,6 @@ const PageWrapper = css`
 export {
   colors,
   fonts,
+  keyframes,
   PageWrapper
 }

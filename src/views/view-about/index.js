@@ -12,7 +12,7 @@ const AboutStyle = css`
     z-index: 100;
     background-color: white;
 
-    padding: 0 10rem;
+    padding: 10rem 10rem 0 10rem;
   }
 `
 
@@ -25,9 +25,10 @@ const MomentList = css`
   }
 
   .moment-wrapper {
+    cursor: default;
     width: 100%;
     border-radius: 2px;
-    background-color: ${colors.gray10};
+    background-color: ${colors.white};
     margin: 0;
 
     display: grid;
@@ -126,17 +127,17 @@ class About extends LitElement {
     this.moments = [
       {
         title: 'School of thought',
-        description: 'Currently creating my own STEM education platform - schoolofthought.io',
+        description: 'Building my own education platform - schoolofthought.io',
         date: '',
       },
       {
         title: 'Conteful Podcast',
-        description: 'Talked about coding without using hands',
+        description: 'Conversation about coding with your voice',
         date: '',
       },
       {
-        title: 'Interseller',
-        description: 'First engineer and am actively managing a team @ interseller.io',
+        title: 'Interseller.io',
+        description: 'First engineer and building an engineering team',
         date: '',
       },
       {

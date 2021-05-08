@@ -1,6 +1,6 @@
 import { css, unsafeCSS } from 'lit-element'
 
-import { fonts, colors } from 'styles'
+import { fonts, colors, keyframes } from 'styles'
 
 export const DesktopStyle = css`
   .bio-wrapper {
@@ -51,15 +51,15 @@ export const DesktopStyle = css`
     font-size: 24px;
     white-space: nowrap;
 
-    background-color: ${colors.white};
+    cursor: default;
     padding: .75rem;
+    background-color: ${colors.white};
     border-radius: 2px;
 
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: baseline;
-
   }
 
   .profile-accent {
@@ -70,6 +70,14 @@ export const DesktopStyle = css`
     margin-top: .25rem;
     text-decoration: none;
     transition: 0.2s ease-out;
+  }
+
+  .profile-hand {
+    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+    animation-duration: 1s;        /* Change to speed up or slow down */
+    animation-iteration-count: 1;  /* Never stop waving :) */
+    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    display: inline-block;
   }
 
   .page-menu {

@@ -2,6 +2,7 @@ import { LitElement, html } from 'lit-element';
 
 import { DesktopStyle, MobileStyle } from './styles.js';
 import { isMobile } from 'utils/device.js';
+import { keyframes } from 'styles'
 
 import profileImg from "./assets/prof2.jpg";
 import "svgs/github";
@@ -11,13 +12,12 @@ import "svgs/resume";
 import "svgs/twitter";
 import "components/comp-link";
 
-
 class Bio extends LitElement {
   static get styles() {
-    // const style = isMobile() ? MobileStyle : DesktopStyle;
-    // return style;
-
-    return DesktopStyle;
+    return [
+      keyframes.WaveAnimation,
+      DesktopStyle
+    ];
   }
 
   render() {
@@ -29,7 +29,7 @@ class Bio extends LitElement {
 
         <div class="bio-content-wrapper">
           <div class="profile">
-            <div>Hello World, I'm<span class="profile-accent">Doug Rudolph 👋</span></div>
+            <div>Hello World, I'm<span class="profile-accent">Doug Rudolph <span class="profile-hand">👋</span></span></div>
           </div>
 
           <!-- Description
