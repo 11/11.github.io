@@ -21,8 +21,9 @@ const AboutStyle = css`
     font-family: ${fonts.wotfard2};
     font-weight: 900;
     font-size: 36px;
-    padding-bottom: 5rem;
+    text-transform: capitalize;
     text-align: center;
+    padding-bottom: 5rem;
   }
 
   .about-description {
@@ -89,7 +90,6 @@ const MomentContent = css`
     margin: 1rem;
     transition: 0.2s ease-out;
     display: block;
-    height: auto;
   }
 
   .moment-title {
@@ -97,6 +97,9 @@ const MomentContent = css`
     font-family: ${fonts.wotfard2};
     font-size: 38px;
     font-weight: 900;
+
+    transition: 0.2s ease-out;
+    text-decoration: underline solid transparent;
   }
 
   .moment-description {
@@ -114,11 +117,11 @@ const MomentContent = css`
     font-family: ${fonts.roboto};
     font-size: 20px;
     font-weight: 300;
+    transition: 0.2s ease-out;
   }
 
   .moment-empty {
     display: inline-block;
-    width: 1px;
     opacity: 0;
     height: auto;
   }
@@ -147,6 +150,7 @@ const MomentDivider = css`
     background-color: ${colors.black};
     width: .25rem;
     height: 100%;
+    transition: 0.2s ease-out;
   }
 
   .moment-divider-dot {
@@ -155,12 +159,26 @@ const MomentDivider = css`
     display: block;
     width: 20px;
     height: 20px;
+    transition: 0.2s ease-out;
   }
 `
 
 const MomentHover = css`
-  .moment-content:hover {
-    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  .moment-wrapper:hover .moment-divider-bar {
+    background-color: ${colors.orange};
+  }
+  .moment-wrapper:hover .moment-divider-dot {
+    background-color: ${colors.orange};
+  }
+
+  .moment-wrapper:hover .moment-date {
+    background-color: ${colors.orange};
+    color: ${colors.white};
+  }
+
+  .moment-wrapper:hover .moment-title {
+    text-decoration: underline solid currentcolor;
+    text-decoration: underline;
   }
 `
 
@@ -181,7 +199,7 @@ class About extends LitElement {
     this.moments = [
       {
         title: 'School of thought',
-        description: 'Building my own education platform - schoolofthought.io',
+        description: 'Building an education platform in my spare time',
         date: 'In my free time',
       },
       {
@@ -257,11 +275,11 @@ class About extends LitElement {
 
           <div class="about-title"> A Little About Myself </div>
           <div class="about-description">
-            My name is Doug. I am a Software Engineer from Brookyln. I currently work and lead an engineering team at <a class="about-link" href="https://interseller.io">interseller.io</a>.
+            My name is Doug. I am a Software Engineer from Brookyln. I currently work and lead an engineering team at <a class="about-link" href="https://interseller.io">Interseller.io</a>.
             <br><br>
             I recently was diagnosed with an RSI injury called Tenosynovitis, and have transitioned to coding full-time using just my voice. I recently had a conversation about my experiences on the <a class="about-link" href="https://www.youtube.com/watch?v=IxXlkSesbwY&ab_channel=Contentful">Conteful developer podcast</a>.
             <br><br>
-            If you'd like to get reach out about an oppurtunity, or just want to say hi, you can message on Twitter <a class="about-link" href="https://twitter.com/_dougrudolph">@_dougrudolph</a>, or through <a class="about-link" href="">email</a>.
+            If you'd like to reach out about an oppurtunity, or just want to say hi, you can message me on Twitter <a class="about-link" href="https://twitter.com/_dougrudolph">@_dougrudolph</a>, or through <a class="about-link" href="">email</a>.
           </div>
 
           <div class="about-title">Things That I've Done</div>
