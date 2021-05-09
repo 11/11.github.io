@@ -81,16 +81,16 @@ const HomepageStyle = css`
   }
 
   .blog-post-link-title {
-    font-family: 'Roboto', sans-serif;
-    font-weight: bolder;
-    font-size: 45px;
+    font-family: ${fonts.roboto};
+    font-weight: 700;
+    font-size: 65px;
     letter-spacing: .75px;
   }
 
   .blog-post-link-description {
     color: ${colors.black};
     font-family: ${fonts.wotfard};
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 400;
     line-height: 1.6;
 

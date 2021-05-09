@@ -5,23 +5,47 @@ import 'components/comp-bio'
 
 const AboutStyle = css`
   .about-wrapper {
-    width: 100%;
-    height: 100%;
-
     position: static;
     z-index: 100;
     background-color: white;
 
     padding: 10rem 10rem 0 10rem;
 
-    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+
+    overflow-y: scroll
+  }
+
+  .about-title {
+    font-family: ${fonts.wotfard2};
+    font-weight: 900;
+    font-size: 36px;
+    padding-bottom: 5rem;
+    text-align: center;
   }
 
   .about-description {
+    display: inline-block;
+
+    line-height: 1.6;
     font-family: ${fonts.wotfard};
-    font-size: 28px;
+    font-size: 22px;
     font-weight: 300;
+
     margin-bottom: 10rem;
+    padding:0 25%;
+  }
+
+  .about-link {
+    color: ${colors.orange};
+    transition: 0.2s ease-out;
+    text-decoration: underline solid transparent;
+    font-weight: 600;
+  }
+
+  .about-link:hover {
+    text-decoration: underline solid Currentcolor;
   }
 `
 
@@ -31,10 +55,14 @@ const MomentList = css`
     flex-direction: column;
     justify: center;
     align-items: center;
+
+    height: 100%;
+    width: 100%;
   }
 
   .moment-wrapper {
     width: 100%;
+    height: 100%;
     border-radius: 2px;
     background-color: ${colors.white};
     margin: 0;
@@ -60,10 +88,8 @@ const MomentContent = css`
     padding: 2rem;
     margin: 1rem;
     transition: 0.2s ease-out;
-  }
-
-  .moment-content:hover {
-    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    height: auto;
   }
 
   .moment-title {
@@ -84,6 +110,7 @@ const MomentContent = css`
     background-color: ${colors.gray20};
     display: inline-block;
     padding: .75rem;
+    margin-bottom: .25rem;
     font-family: ${fonts.roboto};
     font-size: 20px;
     font-weight: 300;
@@ -98,10 +125,6 @@ const MomentContent = css`
 `
 
 const MomentDivider = css`
-  .moment-content:hover .moment-divider-dot {
-    background-color: ${colors.orange};
-  }
-
   .moment-divider-wrapper {
     display: grid;
     justify-content: center;
@@ -135,6 +158,12 @@ const MomentDivider = css`
   }
 `
 
+const MomentHover = css`
+  .moment-content:hover {
+    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+`
+
 class About extends LitElement {
   static get styles() {
     return [
@@ -143,6 +172,7 @@ class About extends LitElement {
       MomentContent,
       MomentList,
       MomentDivider,
+      MomentHover,
     ]
   }
 
@@ -152,32 +182,27 @@ class About extends LitElement {
       {
         title: 'School of thought',
         description: 'Building my own education platform - schoolofthought.io',
-        date: 'May 2021',
-      },
-      {
-        title: 'Conteful Podcast',
-        description: 'Conversation about coding with your voice',
-        date: 'May 2021',
+        date: 'In my free time',
       },
       {
         title: 'Interseller.io',
-        description: 'First engineer and building an engineering team',
+        description: 'First engineer and leading an engineering team',
         date: 'July 2019 - Current',
       },
       {
         title: 'BuzzFeed',
-        description: 'Backend engineer @ BuzzFeed',
+        description: 'Full-time Backend engineer',
         date: 'August 2017 - Feburary 2019',
       },
       {
         title: 'BuzzFeed',
-        description: 'Engineering intern @ BuzzFeed',
+        description: 'Engineering internship',
         date: 'May 2017 - August 2017',
       },
       {
         title: 'hackNY Fellow',
         description: 'hackNY Fellow - class of 2017',
-        date: 'May 2017 - August 2017',
+        date: 'June 2017 - August 2017',
       },
     ]
   }
@@ -191,12 +216,14 @@ class About extends LitElement {
             <div class="moment-title">${title}</div>
             <div class="moment-description">${description}</div>
           </div>
+
           <div class="moment-divider-wrapper">
             <div class="moment-divider">
               <div class="moment-divider-dot"></div>
               <div class="moment-divider-bar"></div>
             </div>
           </div>
+
           <div class="moment-empty"></div>
         </div>
       `
@@ -205,12 +232,14 @@ class About extends LitElement {
     return html`
       <div class="moment-wrapper moment-right">
         <div class="moment-empty"></div>
+
         <div class="moment-divider-wrapper">
           <div class="moment-divider">
             <div class="moment-divider-dot"></div>
             <div class="moment-divider-bar"></div>
           </div>
         </div>
+
         <div class="moment-content">
           <div class="moment-date">${date}</div>
           <div class="moment-title">${title}</div>
@@ -225,14 +254,17 @@ class About extends LitElement {
       <div class="page-wrapper">
         <comp-bio></comp-bio>
         <div class="about-wrapper">
+
+          <div class="about-title"> A Little About Myself </div>
           <div class="about-description">
-            My name is Doug. I am a Software Engineer in NYC.
+            My name is Doug. I am a Software Engineer from Brookyln. I currently work and lead an engineering team at <a class="about-link" href="https://interseller.io">interseller.io</a>.
             <br><br>
-            I currently work at <a href="https://interseller.io">interseller.io</a>. I'm lucky enough to have worked at many fun places and with cool organizations along the way.
+            I recently was diagnosed with an RSI injury called Tenosynovitis, and have transitioned to coding full-time using just my voice. I recently had a conversation about my experiences on the <a class="about-link" href="https://www.youtube.com/watch?v=IxXlkSesbwY&ab_channel=Contentful">Conteful developer podcast</a>.
             <br><br>
-            I like free-style soccer and chess. Follow me on twitter <a href="https://twitter.com/_dougrudolph">@_dougrudolph</a>
+            If you'd like to get reach out about an oppurtunity, or just want to say hi, you can message on Twitter <a class="about-link" href="https://twitter.com/_dougrudolph">@_dougrudolph</a>, or through <a class="about-link" href="">email</a>.
           </div>
 
+          <div class="about-title">Things That I've Done</div>
           <div class="moment-list">
             ${this.moments.map(({ title, description, date }, idx) => {
               return this.renderMoment(title, description, date, idx)
