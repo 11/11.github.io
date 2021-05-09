@@ -72,7 +72,7 @@ export const DesktopStyle = css`
     transition: 0.2s ease-out;
   }
 
-  .profile-hand {
+  .profile:hover .profile-hand {
     animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
     animation-duration: 1s;        /* Change to speed up or slow down */
     animation-iteration-count: 1;  /* Never stop waving :) */
