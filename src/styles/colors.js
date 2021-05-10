@@ -6,10 +6,10 @@ const colors = {
   pink: css`#E50053`,
   darkPurple: css`#342B52`,
 
-  violet: css`#7a0c4b`,
+  violet: css`#b31d72`,
   yellow: css`#a27126`,
   orange: css`#e7ac7c`,
-  green: css`#5e5332`,
+  green: css`#55a57c`,
 
   gray10: css`#EFEFEF`,
   gray20: css`#E6E6E6`,

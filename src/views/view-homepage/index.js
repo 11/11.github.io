@@ -41,15 +41,12 @@ const HomepageStyle = css`
   .blog-post-link-container {
     margin-top: 4rem;
     cursor: pointer;
+
+    transition: 0.15s ease-out;
   }
 
-  .blog-post-link-container:hover {
-    transition: 0.3s ease-out;
-  }
-
-  .blog-post-link-container:hover .blog-post-link-title,.blog-post-read-more {
-    text-decoration-color: ${colors.orange};
-    color: ${colors.orange};
+  .blog-post-link-container:hover .blog-post-link-title {
+    text-decoration: underline solid currentcolor;
   }
 
   .blog-post-link-container a {
@@ -81,17 +78,21 @@ const HomepageStyle = css`
   }
 
   .blog-post-link-title {
-    font-family: ${fonts.roboto};
+    font-family: ${fonts.wotfard2};
     font-weight: 700;
-    font-size: 65px;
+    font-size: 36px;
+    text-transform: capitalize;
+    text-decoration: underline solid transparent;
     letter-spacing: .75px;
+
+    transition: 0.3s ease-out;
   }
 
   .blog-post-link-description {
     color: ${colors.black};
     font-family: ${fonts.wotfard};
-    font-size: 20px;
-    font-weight: 400;
+    font-size: 22px;
+    font-weight: 300;
     line-height: 1.6;
 
     margin-bottom: 1rem;
@@ -100,8 +101,8 @@ const HomepageStyle = css`
   .blog-post-read-more {
     color: ${colors.black};
     font-family: ${fonts.wotfard};
-    font-size: 16px;
-    font-weight: 900;
+    font-size: 18px;
+    font-weight: 600;
     line-height: 1.6;
   }
 `;

@@ -84,7 +84,7 @@ class BlogParticleNet extends LitElement {
             <p class="blog-text">All rendering projects need a place to draw their outputs, and on the web we use the canvas element to do just that.</p>
             <comp-codeblock
               language="JavaScript"
-              code="this is a test"
+              code="console.log('test code');"
             ></comp-codeblock>
           </div>
 

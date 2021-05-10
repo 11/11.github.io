@@ -5,15 +5,14 @@ import 'components/comp-bio'
 
 const AboutStyle = css`
   .about-wrapper {
-    position: static;
-    z-index: 100;
-    background-color: white;
-
-    padding: 10rem 10rem 0 10rem;
-
     width: 100%;
     height: 100%;
+    background-color: white;
 
+    position: static;
+    padding: 0 10rem;
+
+    z-index: 100;
     overflow-y: scroll
   }
 
@@ -35,7 +34,7 @@ const AboutStyle = css`
     font-weight: 300;
 
     margin-bottom: 10rem;
-    padding:0 25%;
+    padding:0 15%;
   }
 
   .about-link {
@@ -47,6 +46,10 @@ const AboutStyle = css`
 
   .about-link:hover {
     text-decoration: underline solid Currentcolor;
+  }
+
+  .about-divider {
+    height: 10rem;
   }
 `
 
@@ -64,7 +67,7 @@ const MomentList = css`
   .moment-wrapper {
     width: 100%;
     height: 100%;
-    border-radius: 2px;
+    border-radius: 4px;
     background-color: ${colors.white};
     margin: 0;
 
@@ -115,9 +118,10 @@ const MomentContent = css`
     padding: .75rem;
     margin-bottom: .25rem;
     font-family: ${fonts.roboto};
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 300;
     transition: 0.2s ease-out;
+    border-radius: 4px;
   }
 
   .moment-empty {
@@ -155,18 +159,16 @@ const MomentDivider = css`
 
   .moment-divider-dot {
     border-radius: 100px;
-    background-color: ${colors.black};
+    border: 4px solid ${colors.black};
+    background-color: ${colors.white};
     display: block;
-    width: 20px;
-    height: 20px;
+    width: 1rem;
+    height: 1rem;
     transition: 0.2s ease-out;
   }
 `
 
 const MomentHover = css`
-  .moment-wrapper:hover .moment-divider-bar {
-    background-color: ${colors.orange};
-  }
   .moment-wrapper:hover .moment-divider-dot {
     background-color: ${colors.orange};
   }
@@ -210,16 +212,16 @@ class About extends LitElement {
       {
         title: 'BuzzFeed',
         description: 'Full-time Backend engineer',
-        date: 'August 2017 - Feburary 2019',
+        date: 'August 2017 - February 2019',
       },
       {
         title: 'BuzzFeed',
-        description: 'Engineering internship',
+        description: 'Backend engineering intern',
         date: 'May 2017 - August 2017',
       },
       {
-        title: 'hackNY Fellow',
-        description: 'hackNY Fellow - class of 2017',
+        title: 'hackNY Fellow - 2017',
+        description: '1 of 29 chosen for an intensive technical program run by Columbia and NYU',
         date: 'June 2017 - August 2017',
       },
     ]
@@ -272,22 +274,25 @@ class About extends LitElement {
       <div class="page-wrapper">
         <comp-bio></comp-bio>
         <div class="about-wrapper">
-
+          <div class="about-divider"></div>
           <div class="about-title"> A Little About Myself </div>
           <div class="about-description">
             My name is Doug. I am a Software Engineer from Brookyln. I currently work and lead an engineering team at <a class="about-link" href="https://interseller.io">Interseller.io</a>.
             <br><br>
-            I recently was diagnosed with an RSI injury called Tenosynovitis, and have transitioned to coding full-time using just my voice. I recently had a conversation about my experiences on the <a class="about-link" href="https://www.youtube.com/watch?v=IxXlkSesbwY&ab_channel=Contentful">Conteful developer podcast</a>.
+            I recently was diagnosed with an RSI injury called Tenosynovitis, and have transitioned to coding full-time using only my voice. I also have gotten the oppurtunity speak about the experience on the <a class="about-link" href="https://www.youtube.com/watch?v=IxXlkSesbwY&ab_channel=Contentful">Conteful developer podcast</a> and wrote a <a class="about-link" href="#">blog post</a> about the logistics of it all.
             <br><br>
-            If you'd like to reach out about an oppurtunity, or just want to say hi, you can message me on Twitter <a class="about-link" href="https://twitter.com/_dougrudolph">@_dougrudolph</a>, or through <a class="about-link" href="">email</a>.
+            Separate from work, I am developing an interactive education platform called <a class="about-link" href="https://schoolofthought.io">schoolofthought.io</a>; and in my free-time I like to play chess, go longboarding, and create <a class="about-link" href="https://www.instagram.com/p/BG2u7YXwC2x/">free-style soccer videos</a>.
+            <br><br>
+            If you'd like to reach out about an oppurtunity, or just want to say hi, my <a class="about-link" href="https://twitter.com/_dougrudolph">Twitter DMs</a> and <a class="about-link" href="mailto:drudolph914@gmail.com">email</a> are open.
           </div>
 
-          <div class="about-title">Things That I've Done</div>
+          <div class="about-title">Some Things That I've Done</div>
           <div class="moment-list">
             ${this.moments.map(({ title, description, date }, idx) => {
               return this.renderMoment(title, description, date, idx)
             })}
           </div>
+          <div class="about-divider"></div>
         </div>
       </div>
     `

@@ -31,31 +31,33 @@ export const BlogStyle = css`
 .blog {
   height: 100%;
   width: 100%;
-  min-width: 600px;
-  padding: 0 6rem;
+  min-width: 800px;
+  max-width: 1000px;
+  padding: 0 10rem;
 }
 
 .blog-header1 {
-  font-family: ${fonts.wotfard};
+  font-family: ${fonts.wotfard2};
   font-size: 45px;
   font-weight: bold;
   text-align: center;
   letter-spacing: .75px;
   line-height: 1.6;
   margin: 128px 0;
-  padding: 0 1.5rem;
+  padding: 0 3rem;
 }
 
 .blog-header2 {
-  font-family: ${fonts.wotfard};
-  font-size: 30px;
+  font-family: ${fonts.wotfard2};
+  font-size: 36px;
   font-weight: 600;
   letter-spacing: .75px;
-  padding: 48px 4rem 16px 4rem;
+
+  padding: 5rem 4rem 3rem 4rem;
 }
 
 .blog-header3 {
-  font-family: ${fonts.wotfard};
+  font-family: ${fonts.wotfard2};
   font-size: 20px;
   font-weight: 600;
   letter-spacing: .75px;
@@ -66,8 +68,8 @@ export const BlogStyle = css`
 .blog-text {
   color: ${colors.black};
   font-family: ${fonts.wotfard};
-  font-size: 19px;
-  font-weight: 400;
+  font-weight: 300;
+  font-size: 22px;
   line-height: 1.6;
 
   margin-bottom: 32px;
@@ -90,7 +92,7 @@ export const BlogStyle = css`
 canvas{
   background-color: ${colors.violet};
   margin-bottom: 20px;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 

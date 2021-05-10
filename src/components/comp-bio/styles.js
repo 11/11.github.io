@@ -54,7 +54,7 @@ export const DesktopStyle = css`
     cursor: default;
     padding: .75rem;
     background-color: ${colors.white};
-    border-radius: 2px;
+    border-radius: 4px;
 
     display: flex;
     flex-direction: row;

@@ -4,7 +4,7 @@ import { colors, fonts } from 'styles'
 
 const CodeBlockStyle = css`
   .code-block-wrapper {
-    border-radius: 2px;
+    border-radius: 4px;
     width: 100%;
     margin: 32px 0
   }
@@ -21,19 +21,23 @@ const CodeBlockStyle = css`
 
   .code-tag {
     color: ${colors.black};
-    font-family: ${fonts.roboto};
+    font-family: ${fonts.wotfard};
     font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 2px;
 
-    padding: .75rem;
     background-color: ${colors.gray10};
-    border-radius: 2px;
+
+    padding: .75rem 1rem;
+    border-radius: 4px;
+    transform: translateY(2px);
   }
 
   .code-block-text {
     padding: 2rem;
     background-color: ${colors.gray10};
-    border-radius: 2px;
-    font-family: 'League Mono', sans-serif;
+    font-family: ${fonts.code};
+    border-radius: 4px;
     font-size: 18px;
     margin: 0;
   }
