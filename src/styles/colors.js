@@ -9,7 +9,7 @@ const colors = {
   violet: css`#b31d72`,
   yellow: css`#a27126`,
   orange: css`#e7ac7c`,
-  green: css`#55a57c`,
+  green: css`#49c987`,
 
   gray10: css`#EFEFEF`,
   gray20: css`#E6E6E6`,

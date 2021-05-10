@@ -38,7 +38,7 @@ const AboutStyle = css`
   }
 
   .about-link {
-    color: ${colors.orange};
+    color: ${colors.green};
     transition: 0.2s ease-out;
     text-decoration: underline solid transparent;
     font-weight: 600;
@@ -177,11 +177,11 @@ const MomentDivider = css`
 
 const MomentHover = css`
   .moment-wrapper:hover .moment-divider-dot {
-    background-color: ${colors.orange};
+    background-color: ${colors.green};
   }
 
   .moment-wrapper:hover .moment-date {
-    background-color: ${colors.orange};
+    background-color: ${colors.green};
     color: ${colors.white};
   }
 
