@@ -35,7 +35,6 @@ class Bio extends LitElement {
           <div class="page-menu">
             <a href="/"> Blog posts </a>
             <a href="/about"> About me </a>
-            <a href="/contact"> Contact info </a>
           </div>
 
           <div class="bio-links">

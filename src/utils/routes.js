@@ -1,6 +1,5 @@
 import 'views/view-homepage'
 import 'views/view-about'
-import 'views/view-contact'
 
 import 'views/blogs/an-introduction-to-rendering-on-the-web'
 
@@ -18,7 +17,6 @@ export const ROUTING_TABLE = [
   /****** TOP LEVEL ROUTES: *****/
   { path: '/', component: 'view-homepage' },
   { path: '/about', component: 'view-about' },
-  { path: '/contact', component: 'view-contact' },
 
   /****** BLOG ROUTES ******/
   {
