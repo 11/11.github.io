@@ -1,8 +1,8 @@
-import 'views/view-homepage';
-import 'views/view-about';
-import 'views/view-contact';
+import 'views/view-homepage'
+import 'views/view-about'
+import 'views/view-contact'
 
-import 'views/blogs/view-particle-net';
+import 'views/blogs/an-introduction-to-rendering-on-the-web'
 
 /*
  * TODO: figure out how to make this work
@@ -23,6 +23,6 @@ export const ROUTING_TABLE = [
   /****** BLOG ROUTES ******/
   {
     path: '/an-introduction-to-rendering-on-the-web',
-    component: 'view-particle-net'
+    component: 'an-introduction-to-rendering-on-the-web'
   },
 ]

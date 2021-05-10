@@ -23,7 +23,7 @@ const CodeBlockStyle = css`
     color: ${colors.black};
     font-family: ${fonts.wotfard};
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 500;
     letter-spacing: 2px;
 
     background-color: ${colors.gray10};
@@ -40,6 +40,7 @@ const CodeBlockStyle = css`
     border-radius: 4px;
     font-size: 18px;
     margin: 0;
+    overflow-x: scroll;
   }
 `
 

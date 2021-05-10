@@ -1,7 +1,7 @@
-import { LitElement, css, html } from 'lit-element';
+import { LitElement, css, html } from 'lit-element'
 
 import { BlogStyle } from 'styles/blogs'
-import { runAnimation } from './particle-net';
+import { runAnimation } from './animations/particle-net'
 
 import "components/comp-bio/"
 import 'components/comp-codeblock'
@@ -20,17 +20,17 @@ const PageWrapper = css`
   }
 `
 
-class BlogParticleNet extends LitElement {
+class AnIntroductiontoRenderingOnTheWeb extends LitElement {
   static get styles() {
     return [
       BlogStyle,
       PageWrapper
-    ];
+    ]
   }
 
   constructor() {
-    super();
-    document.title = 'Doug Rudolph - Particle Net';
+    super()
+    document.title = 'An Introduction to Rendering on the Web'
   }
 
   connectedCallback() {
@@ -44,9 +44,9 @@ class BlogParticleNet extends LitElement {
   }
 
   disconnectedCallback() {
-    super.disconnectedCallback();
+    super.disconnectedCallback()
 
-    window.removeEventListener("resize", this.handleResize);
+    window.removeEventListener("resize", this.handleResize)
   }
 
 
@@ -64,9 +64,9 @@ class BlogParticleNet extends LitElement {
   }
 
   startAnimation = () => {
-    const canvas = this.shadowRoot.getElementById('blog-canvas');
-    const ctx = canvas.getContext("2d");
-    runAnimation(canvas, ctx);
+    const canvas = this.shadowRoot.getElementById('blog-canvas')
+    const ctx = canvas.getContext("2d")
+    runAnimation(canvas, ctx)
   }
 
   render() {
@@ -84,7 +84,7 @@ class BlogParticleNet extends LitElement {
             <p class="blog-text">All rendering projects need a place to draw their outputs, and on the web we use the canvas element to do just that.</p>
             <comp-codeblock
               language="JavaScript"
-              code="console.log('test code');"
+              code="console.log('test code')"
             ></comp-codeblock>
           </div>
 
@@ -98,8 +98,8 @@ class BlogParticleNet extends LitElement {
           </div>
         </div>
       </div>
-    `;
+    `
   }
 }
 
-customElements.define('view-particle-net', BlogParticleNet);
+customElements.define('an-introduction-to-rendering-on-the-web', AnIntroductiontoRenderingOnTheWeb)

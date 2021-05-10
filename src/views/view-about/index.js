@@ -95,6 +95,12 @@ const MomentContent = css`
     display: block;
   }
 
+  .moment-link {
+    display: block;
+    text-decoration: none;
+    color: currentcolor;
+  }
+
   .moment-title {
     text-transform: uppercase;
     font-family: ${fonts.wotfard2};
@@ -150,6 +156,7 @@ const MomentDivider = css`
     height: 100%;
   }
 
+
   .moment-divider-bar {
     background-color: ${colors.black};
     width: .25rem;
@@ -203,40 +210,46 @@ class About extends LitElement {
         title: 'School of thought',
         description: 'Building an education platform in my spare time',
         date: 'In my free time',
+        link: 'https://schoolofthought.io',
       },
       {
         title: 'Interseller.io',
         description: 'First engineer and leading an engineering team',
         date: 'July 2019 - Current',
+        link: 'https://www.Interseller.io/about',
       },
       {
         title: 'BuzzFeed',
         description: 'Full-time Backend engineer',
         date: 'August 2017 - February 2019',
+        link: '#',
       },
       {
         title: 'BuzzFeed',
         description: 'Backend engineering intern',
         date: 'May 2017 - August 2017',
+        link: 'https://tech.buzzfeed.com/meet-buzzfeed-techs-2017-intern-squad-7d9d3bcefa05',
       },
       {
         title: 'hackNY Fellow - 2017',
         description: '1 of 29 chosen for an intensive technical program run by Columbia and NYU',
         date: 'June 2017 - August 2017',
+        link: 'https://hackny.org/blog/2017/06/announcing-the-class-of-2017-hackny-fellows',
       },
     ]
   }
 
-  renderMoment = (title, description, date=null, idx=0) => {
+  renderMoment = (title, description, date, link, idx=0) => {
     if (idx === 0 || idx % 2 === 0) {
       return html`
         <div class="moment-wrapper moment-left">
-          <div class="moment-content">
-            <div class="moment-date">${date}</div>
-            <div class="moment-title">${title}</div>
-            <div class="moment-description">${description}</div>
-          </div>
-
+          <a class="moment-link" href="${link}">
+            <div class="moment-content">
+              <div class="moment-date">${date}</div>
+              <div class="moment-title">${title}</div>
+              <div class="moment-description">${description}</div>
+            </div>
+          </a>
           <div class="moment-divider-wrapper">
             <div class="moment-divider">
               <div class="moment-divider-dot"></div>
@@ -260,11 +273,13 @@ class About extends LitElement {
           </div>
         </div>
 
-        <div class="moment-content">
-          <div class="moment-date">${date}</div>
-          <div class="moment-title">${title}</div>
-          <div class="moment-description">${description}</div>
-        </div>
+        <a class="moment-link" href="${link}">
+          <div class="moment-content">
+            <div class="moment-date">${date}</div>
+            <div class="moment-title">${title}</div>
+            <div class="moment-description">${description}</div>
+          </div>
+        </a>
       </div>
     `
   }
@@ -288,8 +303,8 @@ class About extends LitElement {
 
           <div class="about-title">Some Things That I've Done</div>
           <div class="moment-list">
-            ${this.moments.map(({ title, description, date }, idx) => {
-              return this.renderMoment(title, description, date, idx)
+            ${this.moments.map(({ title, description, date, link }, idx) => {
+              return this.renderMoment(title, description, date, link, idx)
             })}
           </div>
           <div class="about-divider"></div>
