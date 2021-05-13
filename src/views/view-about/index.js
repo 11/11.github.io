@@ -294,7 +294,7 @@ class About extends LitElement {
           <div class="about-description">
             My name is Doug. I am a Software Engineer from Brookyln. I currently work and lead an engineering team at <a class="about-link" href="https://interseller.io">Interseller.io</a>.
             <br><br>
-            I recently was diagnosed with an RSI injury called Tenosynovitis, and have transitioned to coding full-time using only my voice. I also have gotten the oppurtunity speak about the experience on the <a class="about-link" href="https://www.youtube.com/watch?v=IxXlkSesbwY&ab_channel=Contentful">Conteful developer podcast</a> and wrote a <a class="about-link" href="#">blog post</a> about the logistics of it all.
+            I recently was diagnosed with an RSI injury called Tenosynovitis, and have transitioned to coding full-time using only my voice. I have gotten the oppurtunity to speak about the experience on the <a class="about-link" href="https://www.youtube.com/watch?v=IxXlkSesbwY&ab_channel=Contentful">Conteful developer podcast</a> and wrote a <a class="about-link" href="#">blog post</a> about the logistics of it all.
             <br><br>
             Separate from work, I am developing an interactive education platform called <a class="about-link" href="https://schoolofthought.io">schoolofthought.io</a>; and in my free-time I like to play chess, go longboarding, and create <a class="about-link" href="https://www.instagram.com/p/BG2u7YXwC2x/">free-style soccer videos</a>.
             <br><br>

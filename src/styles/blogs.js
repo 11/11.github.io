@@ -74,7 +74,6 @@ export const BlogStyle = css`
 
   margin-bottom: 32px;
   padding: 0 4rem;
-
 }
 
 .blog-code-inline {
@@ -95,13 +94,20 @@ canvas{
   border-radius: 4px;
 }
 
+@media screen and (max-width: 2100px) {
+  .blog {
+    padding: 0 2rem;
+    min-width: 675px;
+    max-width: 800px;
+  }
+}
 
 @media screen and (max-width: 1080px){
-  canvas{
+  canvas {
     margin: 0;
     padding: 0;
     margin: 32px 0;
-    background-color: ${colors.green};
+    background-color: ${colors.violet};
   }
 }
 `

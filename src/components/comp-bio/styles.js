@@ -36,14 +36,13 @@ export const DesktopStyle = css`
   .bio-content-wrapper {
     position: relative;
     z-index: 10;
-    padding: 1.5rem 12rem 1.5rem 4rem;
+    padding: 1.5rem 4rem 1.5rem 4rem;
   }
 
   .bio-content-wrapper > div {
     margin-bottom: 30px;
   }
 
-  /* title is inline block to allow nav to be on the top bar as well, also has custom font */
   .profile {
     color: ${colors.black};
     font-family: ${fonts.wotfard2};
@@ -150,4 +149,33 @@ export const DesktopStyle = css`
     font-size: .75rem;
     color: ${colors.white};
   }
+
+  @media screen and (max-width: 2100px) {
+    .bio-content-wrapper {
+      padding: 1.5rem 2rem 1.5rem 2rem;
+    }
+
+    .profile {
+      font-size: 20px;
+    }
+
+    .profile-accent {
+      font-size: 32px;
+    }
+  }
+
+  @media screen and (max-width: 2100px) {
+    .bio-content-wrapper {
+      padding: 1.5rem;
+    }
+
+    .profile {
+      font-size: 20px;
+    }
+
+    .profile-accent {
+      font-size: 32px;
+    }
+  }
+
 `
