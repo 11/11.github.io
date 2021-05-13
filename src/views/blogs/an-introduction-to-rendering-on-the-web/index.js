@@ -35,27 +35,19 @@ class AnIntroductiontoRenderingOnTheWeb extends LitElement {
 
   connectedCallback() {
     super.connectedCallback()
-
     window.addEventListener("resize", this.handleResize)
-  }
-
-  updateSubtreeComplete() {
-
+    window.addEventListener('load', () => {
+      this.handleResize()
+      this.startAnimation()
+    })
   }
 
   disconnectedCallback() {
     super.disconnectedCallback()
-
     window.removeEventListener("resize", this.handleResize)
   }
 
-
-  onMount = () => {
-    this.handleResize()
-    this.startAnimation()
-  }
-
-  handleResize = () => {
+  handleResize = async () => {
     const canvas = this.shadowRoot.getElementById('blog-canvas')
     const { width: blogWidth} = canvas.parentElement.getBoundingClientRect()
     const paddingOffest = window.getComputedStyle(canvas.parentElement).paddingInline
@@ -63,7 +55,7 @@ class AnIntroductiontoRenderingOnTheWeb extends LitElement {
     canvas.height = 300
   }
 
-  startAnimation = () => {
+  startAnimation = async () => {
     const canvas = this.shadowRoot.getElementById('blog-canvas')
     const ctx = canvas.getContext("2d")
     runAnimation(canvas, ctx)
