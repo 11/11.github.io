@@ -28,6 +28,12 @@ const TableOfContentsStyles = css`
     font-size: 16px;
     margin-top: 1rem;
   }
+
+  .toc-active-section {
+    color: ${colors.orange};
+    margin-top: 1rem;
+    font-weight: 600;
+  }
 `
 
 class ComponentTableOfContents extends LitElement {
@@ -39,14 +45,56 @@ class ComponentTableOfContents extends LitElement {
 
   static get properties() {
     return {
-      sections: { type: Array }
+      activeSection: { type: Object },
     }
   }
 
   constructor() {
     super()
 
-    this.sections = []
+    this.sections = null
+    this.activeSection = null
+  }
+
+  connectedCallback() {
+    super.connectedCallback()
+    window.addEventListener('load', () => {
+      this.sections = this._getBlogSections()
+      this.activeSection = this.sections[0]
+
+      const root = document.querySelector('output').firstElementChild.shadowRoot
+      const blogWrapper = root.querySelector('.blog-wrapper')
+      blogWrapper.addEventListener('scroll', this.onScroll, true)
+    })
+  }
+
+  _getBlogSections = () => {
+    const root = document.querySelector('output').firstElementChild.shadowRoot
+    const blogDiv = root.querySelector('.blog')
+
+    // get the div of the blog title
+    const intro = blogDiv.querySelector('.blog-header1')
+
+    // get the div of all the subsections of the blog
+    const blogSections = Array.from(blogDiv.querySelectorAll('.blog-header2'))
+
+    return [intro, ...blogSections]
+  }
+
+  onScroll = () => {
+    this.activeSection = this._getBlogSections().reduce((selectedSection, nextSection) => {
+      if (!selectedSection) {
+        return nextSection
+      }
+
+      const { top: nextTop } = nextSection.getBoundingClientRect()
+      if (nextTop < window.innerHeight / 2) {
+        return nextSection
+      } else {
+        return selectedSection
+      }
+    }, null)
+    console.log(this.activeSection.innerHTML)
   }
 
   render() {
@@ -55,13 +103,18 @@ class ComponentTableOfContents extends LitElement {
         <div class="toc-title">Table of Contents</div>
 
         <div class="toc-sections">
-          ${this.sections.map((sectionName) => {
-            return html`
-              <div class="toc-section">
-                ${sectionName}
-              <div>
-            `
-          })}
+          ${!this.sections
+              ? null
+              : this.sections.map((section) => {
+                  return html`
+                    <div class=${section.innerHTML === this.activeSection.innerHTML
+                      ? 'toc-active-section'
+                      : 'toc-section'
+                    }>
+                      ${section.innerHTML}
+                    </div>`
+                })
+          }
         </div>
       </div>
     `

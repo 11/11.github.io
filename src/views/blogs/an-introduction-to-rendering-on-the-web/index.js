@@ -81,12 +81,7 @@ class AnIntroductiontoRenderingOnTheWeb extends LitElement {
           </div>
 
           <div class="blog-utils">
-            <comp-table-of-contents
-              .sections="${[
-                'Introduction',
-                'The Canvas'
-              ]}"
-            ></comp-table-of-contents>
+            <comp-table-of-contents></comp-table-of-contents>
           </div>
         </div>
       </div>
