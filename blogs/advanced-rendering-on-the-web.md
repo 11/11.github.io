@@ -1,6 +1,8 @@
 ---
 author: Doug Rudolph
 title: Introduction to Rendering for the Web
+descriptions:
+tags: :
 ---
 
 If you've been thinking about learning to develop your own browser games, or to create animations for the web, you've probably been a bit overwhelmed by the number of technologies and concepts at your disposable. We live in an era of abundance, and there are a lot of options.

@@ -1,7 +1,6 @@
 import { LitElement, html } from 'lit-element';
 
-import { DesktopStyle, MobileStyle } from './styles.js';
-import { isMobile } from 'utils/device.js';
+import { DesktopStyle } from './styles.js';
 import { keyframes } from 'styles'
 
 import profileImg from "./assets/prof2.jpg";

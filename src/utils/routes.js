@@ -2,6 +2,7 @@ import 'views/view-homepage'
 import 'views/view-about'
 
 import 'views/blogs/an-introduction-to-rendering-on-the-web'
+import 'views/blogs/coding-without-your-hands'
 
 /*
  * TODO: figure out how to make this work
@@ -22,5 +23,9 @@ export const ROUTING_TABLE = [
   {
     path: '/an-introduction-to-rendering-on-the-web',
     component: 'an-introduction-to-rendering-on-the-web'
+  },
+  {
+    path: '/coding-without-your-hands',
+    component: 'coding-without-your-hands'
   },
 ]
