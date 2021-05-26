@@ -5,6 +5,7 @@ import { BlogStyle } from 'styles/blogs'
 import "components/comp-bio/"
 import 'components/comp-codeblock'
 import 'components/comp-table-of-contents'
+import 'components/comp-like-clap'
 
 const PageWrapper = css`
   .page-wrapper {
@@ -63,6 +64,7 @@ class CodingWithoutYourHands extends LitElement {
 
           <div class="blog-utils">
             <comp-table-of-contents></comp-table-of-contents>
+            <comp-like-clap></comp-like-clap>
           </div>
         </div>
       </div>
