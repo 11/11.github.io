@@ -1,8 +1,8 @@
-import { css, unsafeCSS } from 'lit-element'
+import { css } from 'lit-element'
 
-import { fonts, colors, keyframes } from 'styles'
+import { fonts, colors } from 'styles'
 
-export const DesktopStyle = css`
+const BioDesktop = css`
   .bio-wrapper {
     height: 100%;
 
@@ -12,7 +12,22 @@ export const DesktopStyle = css`
     align-items: flex-start;
   }
 
-  .background-image-wrapper {
+  .bio-content-wrapper {
+    position: relative;
+    z-index: 10;
+    padding: 1.5rem 4rem 1.5rem 4rem;
+  }
+
+  .bio-footer {
+    white-space: nowrap;
+    font-family: 'Roboto', sans-serif;
+    font-size: .75rem;
+    color: ${colors.white};
+  }
+`
+
+const ProfilePicture = css`
+  .profile-picture-wrapper {
     position: absolute;
     z-index: 1;
     height: 100%;
@@ -27,23 +42,19 @@ export const DesktopStyle = css`
     object-fit: contain;
   }
 
-  .background-image-wrapper img {
+  .profile-picture-wrapper img {
     height: 100%;
     vertical-align: middle;
     filter: brightness(55%) saturate(120%);
   }
+`
 
-  .bio-content-wrapper {
-    position: relative;
-    z-index: 10;
-    padding: 1.5rem 4rem 1.5rem 4rem;
-  }
-
+const BioTitle = css`
   .bio-content-wrapper > div {
     margin-bottom: 30px;
   }
 
-  .profile {
+  .bio-title {
     color: ${colors.black};
     font-family: ${fonts.wotfard2};
     font-weight: 300;
@@ -61,7 +72,7 @@ export const DesktopStyle = css`
     justify-content: baseline;
   }
 
-  .profile-accent {
+  .bio-title-emphasis {
     display: block;
     font-family: ${fonts.wotfard2};
     font-size: 45px;
@@ -71,14 +82,16 @@ export const DesktopStyle = css`
     transition: 0.2s ease-out;
   }
 
-  .profile:hover .profile-hand {
-    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
-    animation-duration: 1s;        /* Change to speed up or slow down */
-    animation-iteration-count: 1;  /* Never stop waving :) */
-    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+  .bio-title:hover .wavy-hand{
+    animation-name: wave-animation;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    transform-origin: 70% 70%;
     display: inline-block;
   }
+`
 
+const NavMenu = css`
   .page-menu {
     font-family: ${fonts.roboto};
     font-weight: 300;
@@ -111,8 +124,10 @@ export const DesktopStyle = css`
     border-left: 4px solid ${colors.orange};
     transform: scale(1, 1.01);
   }
+`
 
-  .bio-links {
+const BioIconLinks = css`
+  .bio-icon-links {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -142,14 +157,9 @@ export const DesktopStyle = css`
     width: .65rem;
     height: .65rem;
   }
+`
 
-  .bio-footer {
-    white-space: nowrap;
-    font-family: 'Roboto', sans-serif;
-    font-size: .75rem;
-    color: ${colors.white};
-  }
-
+const WideScreenMediaQueries = css`
   @media screen and (max-width: 2100px) {
     .bio-content-wrapper {
       padding: 1.5rem 2rem 1.5rem 2rem;
@@ -159,7 +169,7 @@ export const DesktopStyle = css`
       font-size: 20px;
     }
 
-    .profile-accent {
+    .bio-title-emphasis {
       font-size: 32px;
     }
   }
@@ -173,9 +183,17 @@ export const DesktopStyle = css`
       font-size: 20px;
     }
 
-    .profile-accent {
+    .bio-title-emphasis {
       font-size: 32px;
     }
   }
-
 `
+
+export const DesktopStyles = [
+  BioDesktop,
+  BioTitle,
+  BioIconLinks,
+  ProfilePicture,
+  NavMenu,
+  WideScreenMediaQueries,
+]

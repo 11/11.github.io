@@ -1,7 +1,7 @@
 import { LitElement, html } from 'lit-element';
 
-import { DesktopStyle } from './styles.js';
 import { keyframes } from 'styles'
+import { DesktopStyles } from './styles/desktop'
 
 import profileImg from "./assets/prof2.jpg";
 import "svgs/github";
@@ -15,20 +15,20 @@ class Bio extends LitElement {
   static get styles() {
     return [
       keyframes.WaveAnimation,
-      DesktopStyle
+      ...DesktopStyles
     ];
   }
 
   render() {
     return html`
       <div class="bio-wrapper">
-        <div class="background-image-wrapper">
+        <div class="profile-picture-wrapper">
           <img src="${profileImg}"/>
         </div>
 
         <div class="bio-content-wrapper">
-          <div class="profile">
-            <div>Hello World, I'm<span class="profile-accent">Doug Rudolph <span class="profile-hand">👋</span></span></div>
+          <div class="bio-title">
+            <div>Hello World, I'm<span class="bio-title-emphasis">Doug Rudolph <span class="wavy-hand">👋</span></span></div>
           </div>
 
           <div class="page-menu">
@@ -36,7 +36,7 @@ class Bio extends LitElement {
             <a href="/about"> About me </a>
           </div>
 
-          <div class="bio-links">
+          <div class="bio-icon-links">
             <div>
               <comp-link url="./doug_rudolph_resume.pdf" target="_blank">
                 <span class="icon-container">
