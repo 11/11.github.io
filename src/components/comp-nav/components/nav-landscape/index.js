@@ -21,14 +21,14 @@ class NavLandscape extends LitElement {
 
   render() {
     return html`
-      <div class="bio-wrapper">
+      <div class="nav-wrapper">
         <div class="profile-picture-wrapper">
           <img src="${profileImg}"/>
         </div>
 
-        <div class="bio-content-wrapper">
-          <div class="bio-title">
-            <div>Hello World, I'm<span class="bio-title-emphasis">Doug Rudolph <span class="wavy-hand">👋</span></span></div>
+        <div class="nav-content-wrapper">
+          <div class="nav-title">
+            <div>Hello World, I'm<span class="nav-title-emphasis">Doug Rudolph <span class="wavy-hand">👋</span></span></div>
           </div>
 
           <nav class="nav-menu">
@@ -36,7 +36,7 @@ class NavLandscape extends LitElement {
             <a href="/about"> About me </a>
           </nav>
 
-          <div class="bio-icon-links">
+          <div class="nav-icon-links">
             <div>
               <comp-link url="./doug_rudolph_resume.pdf" target="_blank">
                 <span class="icon-container">
@@ -74,7 +74,7 @@ class NavLandscape extends LitElement {
             </div>
           </div>
 
-          <div class="bio-footer"> © All rights reserved</div>
+          <div class="nav-footer"> © All rights reserved</div>
         </div>
       </div>
     `

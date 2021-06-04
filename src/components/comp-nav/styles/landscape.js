@@ -2,8 +2,8 @@ import { css } from 'lit-element'
 
 import { fonts, colors } from 'styles'
 
-const BioDesktop = css`
-  .bio-wrapper {
+const NavLandscape = css`
+  .nav-wrapper {
     height: 100%;
 
     display: flex;
@@ -12,13 +12,13 @@ const BioDesktop = css`
     align-items: flex-start;
   }
 
-  .bio-content-wrapper {
+  .nav-content-wrapper {
     position: relative;
     z-index: 10;
     padding: 1.5rem 4rem 1.5rem 4rem;
   }
 
-  .bio-footer {
+  .nav-footer {
     white-space: nowrap;
     font-family: 'Roboto', sans-serif;
     font-size: .75rem;
@@ -49,12 +49,12 @@ const ProfilePicture = css`
   }
 `
 
-const BioTitle = css`
-  .bio-content-wrapper > div, nav {
+const NavTitle = css`
+  .nav-content-wrapper > div, nav {
     margin-bottom: 30px;
   }
 
-  .bio-title {
+  .nav-title {
     color: ${colors.black};
     font-family: ${fonts.wotfard2};
     font-weight: 300;
@@ -72,7 +72,7 @@ const BioTitle = css`
     justify-content: baseline;
   }
 
-  .bio-title-emphasis {
+  .nav-title-emphasis {
     display: block;
     font-family: ${fonts.wotfard2};
     font-size: 45px;
@@ -82,7 +82,7 @@ const BioTitle = css`
     transition: 0.2s ease-out;
   }
 
-  .bio-title:hover .wavy-hand{
+  .nav-title:hover .wavy-hand{
     animation-name: wave-animation;
     animation-duration: 1s;
     animation-iteration-count: 1;
@@ -126,8 +126,8 @@ const NavMenu = css`
   }
 `
 
-const BioIconLinks = css`
-  .bio-icon-links {
+const NavIconLinks = css`
+  .nav-icon-links {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -159,9 +159,9 @@ const BioIconLinks = css`
   }
 `
 
-const WideScreenMediaQueries = css`
+const LandscapeMediaQueries = css`
   @media screen and (max-width: 2100px) {
-    .bio-content-wrapper {
+    .nav-content-wrapper {
       padding: 1.5rem 2rem 1.5rem 2rem;
     }
 
@@ -169,13 +169,13 @@ const WideScreenMediaQueries = css`
       font-size: 20px;
     }
 
-    .bio-title-emphasis {
+    .nav-title-emphasis {
       font-size: 32px;
     }
   }
 
   @media screen and (max-width: 2100px) {
-    .bio-content-wrapper {
+    .nav-content-wrapper {
       padding: 1.5rem;
     }
 
@@ -183,17 +183,17 @@ const WideScreenMediaQueries = css`
       font-size: 20px;
     }
 
-    .bio-title-emphasis {
+    .nav-title-emphasis {
       font-size: 32px;
     }
   }
 `
 
 export const LandscapeStyles = [
-  BioDesktop,
-  BioTitle,
-  BioIconLinks,
+  NavLandscape,
+  NavTitle,
+  NavIconLinks,
   ProfilePicture,
   NavMenu,
-  WideScreenMediaQueries,
+  LandscapeMediaQueries,
 ]
