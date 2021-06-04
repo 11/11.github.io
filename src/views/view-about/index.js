@@ -57,7 +57,7 @@ const MomentList = css`
  .moment-list {
     display: flex;
     flex-direction: column;
-    justify: center;
+    justify-content: center;
     align-items: center;
 
     height: 100%;
@@ -191,6 +191,29 @@ const MomentHover = css`
   }
 `
 
+const MediaQueries = css`
+  @media screen and (max-width: 1000px) {
+    .about-wrapper {
+      padding: 0 3rem;
+    }
+
+    .about-title {
+      text-align: left;
+      font-size: 72px;
+    }
+
+    .about-description {
+      padding: 0;
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+    .about-divider {
+      height: 20rem;
+    }
+  }
+`
+
 class About extends LitElement {
   static get styles() {
     return [
@@ -200,6 +223,7 @@ class About extends LitElement {
       MomentList,
       MomentDivider,
       MomentHover,
+      MediaQueries,
     ]
   }
 
