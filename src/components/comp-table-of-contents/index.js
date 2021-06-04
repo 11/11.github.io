@@ -98,6 +98,10 @@ class ComponentTableOfContents extends LitElement {
   }
 
   render() {
+    if (window.innerWidth <= 1000) {
+      return null
+    }
+
     return html`
       <div class="toc-wrapper">
         <div class="toc-title">Table of Contents</div>
