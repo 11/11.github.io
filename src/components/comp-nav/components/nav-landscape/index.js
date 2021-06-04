@@ -1,22 +1,22 @@
-import { LitElement, html } from 'lit-element';
+import { LitElement, html } from 'lit-element'
 
 import { keyframes } from 'styles'
-import { DesktopStyles } from './styles/desktop'
+import { LandscapeStyles } from '../../styles/landscape'
 
-import profileImg from "./assets/prof2.jpg";
-import "svgs/github";
-import "svgs/linkedin";
-import "svgs/mail";
-import "svgs/resume";
-import "svgs/twitter";
-import "components/comp-link";
+import profileImg from "../../assets/prof2.jpg"
+import "svgs/github"
+import "svgs/linkedin"
+import "svgs/mail"
+import "svgs/resume"
+import "svgs/twitter"
+import "components/comp-link"
 
-class Bio extends LitElement {
+class NavLandscape extends LitElement {
   static get styles() {
     return [
       keyframes.WaveAnimation,
-      ...DesktopStyles
-    ];
+      ...LandscapeStyles
+    ]
   }
 
   render() {
@@ -31,10 +31,10 @@ class Bio extends LitElement {
             <div>Hello World, I'm<span class="bio-title-emphasis">Doug Rudolph <span class="wavy-hand">👋</span></span></div>
           </div>
 
-          <div class="page-menu">
+          <nav class="nav-menu">
             <a href="/"> Blog posts </a>
             <a href="/about"> About me </a>
-          </div>
+          </nav>
 
           <div class="bio-icon-links">
             <div>
@@ -77,8 +77,8 @@ class Bio extends LitElement {
           <div class="bio-footer"> © All rights reserved</div>
         </div>
       </div>
-    `;
+    `
   }
 }
 
-customElements.define('comp-bio', Bio);
+customElements.define('nav-landscape', NavLandscape)

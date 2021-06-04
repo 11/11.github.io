@@ -50,7 +50,7 @@ const ProfilePicture = css`
 `
 
 const BioTitle = css`
-  .bio-content-wrapper > div {
+  .bio-content-wrapper > div, nav {
     margin-bottom: 30px;
   }
 
@@ -92,7 +92,7 @@ const BioTitle = css`
 `
 
 const NavMenu = css`
-  .page-menu {
+  .nav-menu {
     font-family: ${fonts.roboto};
     font-weight: 300;
     font-size: 22px;
@@ -105,7 +105,7 @@ const NavMenu = css`
     align-items: flex-start;
   }
 
-  .page-menu a {
+  .nav-menu a {
     display: inline-block;
     color: ${colors.white};
     text-decoration: none;
@@ -118,7 +118,7 @@ const NavMenu = css`
     transition: 0.2s ease-out;
   }
 
-  .page-menu a:hover {
+  .nav-menu a:hover {
     color: ${colors.orange};
     text-decoration: none;
     border-left: 4px solid ${colors.orange};
@@ -189,7 +189,7 @@ const WideScreenMediaQueries = css`
   }
 `
 
-export const DesktopStyles = [
+export const LandscapeStyles = [
   BioDesktop,
   BioTitle,
   BioIconLinks,

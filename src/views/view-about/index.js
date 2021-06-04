@@ -1,7 +1,7 @@
 import { LitElement, css, html } from 'lit-element'
 import { PageWrapper, colors, fonts } from 'styles'
 
-import 'components/comp-bio'
+import 'components/comp-nav'
 
 const AboutStyle = css`
   .about-wrapper {
@@ -287,7 +287,7 @@ class About extends LitElement {
   render() {
     return html`
       <div class="page-wrapper">
-        <comp-bio></comp-bio>
+        <comp-nav></comp-nav>
         <div class="about-wrapper">
           <div class="about-divider"></div>
           <div class="about-title"> A Little About Myself </div>

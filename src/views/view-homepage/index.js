@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit-element'
 import { fonts, colors } from 'styles'
-import "components/comp-bio/";
+import 'components/comp-nav/'
 
 const HomepageStyle = css`
   .homepage-wrapper {
@@ -179,7 +179,7 @@ class Homepage extends LitElement {
   render() {
     return html`
       <div class="homepage-wrapper">
-        <comp-bio></comp-bio>
+        <comp-nav></comp-nav>
 
         <div class="content-wrapper">
           ${this.renderBlogPosts(this.blogList)}

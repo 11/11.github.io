@@ -2,7 +2,7 @@ import { LitElement, css, html } from 'lit-element'
 
 import { BlogStyle } from 'styles/blogs'
 
-import "components/comp-bio/"
+import 'components/comp-nav'
 import 'components/comp-codeblock'
 import 'components/comp-table-of-contents'
 import 'components/comp-like-clap'
@@ -50,7 +50,7 @@ class CodingWithoutYourHands extends LitElement {
   render() {
     return html`
       <div class="page-wrapper">
-        <comp-bio></comp-bio>
+        <comp-nav></comp-nav>
         <div class="blog-wrapper">
           <div class="blog">
             <h1 class="blog-header1">Coding without your Hands</h1>

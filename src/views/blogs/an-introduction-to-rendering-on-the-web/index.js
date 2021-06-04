@@ -3,7 +3,7 @@ import { LitElement, css, html } from 'lit-element'
 import { BlogStyle } from 'styles/blogs'
 import { runAnimation } from './animations/particle-net'
 
-import "components/comp-bio/"
+import 'components/comp-nav'
 import 'components/comp-codeblock'
 import 'components/comp-table-of-contents'
 
@@ -64,7 +64,7 @@ class AnIntroductiontoRenderingOnTheWeb extends LitElement {
   render() {
     return html`
       <div class="page-wrapper">
-        <comp-bio></comp-bio>
+        <comp-nav></comp-nav>
         <div class="blog-wrapper">
           <div class="blog">
             <h1 class="blog-header1">An Introduction to Rendering on the Web</h1>
